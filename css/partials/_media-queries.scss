@@ -1,0 +1,27 @@
+// Desktops pantallas grandes
+@mixin desktop {
+  @media only screen and (min-width: 1236px) {
+    @content;
+  }
+}
+
+//  Laptops, Desktops pantallas pequeñas
+@mixin laptot-desktop {
+  @media only screen and (min-width: 1025px) and (max-width: 1235px) {
+    @content;
+  }
+}
+
+//Tablet - Ipad
+@mixin tablet {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+//Mayoria de telefonos
+@mixin movil {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}

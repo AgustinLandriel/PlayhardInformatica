@@ -1,0 +1,211 @@
+@import "./variables";
+@import "./media-queries";
+
+// -------- Section 1  ----------
+
+.section {
+  // Armar tu pc
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  @include movil {
+    flex-wrap: wrap;
+  }
+  &__box {
+    display: flex;
+  }
+
+  &__box-img {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+  }
+
+  &__parrafo {
+    color: $white;
+    font-size: 2rem;
+    margin-top: 80px;
+
+    @include tablet {
+      font-size: 1.2rem;
+    }
+
+    & p {
+      padding: 30px;
+    }
+  }
+  .resaltador {
+    background-color: $black-opacity;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: #09ff00;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Lato";
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+// -------- Section 2  ----------
+
+.section2 {
+  //Productos Destacados
+  .titulo-productoDestacado {
+    text-align: center;
+    padding: 5rem;
+    text-shadow: 0px 0px 10px $black;
+  }
+
+  .card-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  //Info tienda
+  &__info {
+    background-color: $black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid #09ff0059;
+    @include movil {
+      flex-direction: column;
+    }
+
+    & p {
+      color: $white;
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+
+  //Reviews  headset gaming
+
+  .reviews {
+    display: flex;
+    justify-content: center;
+    background-color: $black-opacity;
+    padding: 5rem;
+
+    @include laptot-desktop {
+      flex-wrap: wrap;
+      justify-content: end;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include movil {
+      flex-wrap: wrap;
+    }
+    &__subtitulo {
+      color: $white;
+      font-size: 2.5rem;
+      font-weight: 300;
+      font-family: "Nunito", sans-serif;
+      font-weight: 500;
+      align-self: center;
+      padding: 1rem;
+
+      @include laptot-desktop {
+        align-self: flex-end;
+      }
+      @include tablet {
+        align-self: flex-start;
+      }
+    }
+
+    &__img {
+      width: 220px;
+      height: 200px;
+      margin: 1rem;
+      border: $borde-green;
+      border-radius: 20px;
+    }
+  }
+
+  // Servicio soporte tecnico
+
+  .servicio {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../assets/fondo7.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 2rem;
+    align-items: center;
+
+    @include desktop {
+      justify-content: center;
+    }
+    @include laptot-desktop {
+      justify-content: center;
+    }
+    @include tablet {
+      justify-content: center;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin: 2rem;
+      text-transform: uppercase;
+      color: $white;
+      font-family: "Lato";
+
+      @include desktop {
+        flex: 1;
+        align-self: center;
+      }
+    }
+
+    & div p {
+      background-color: $black-opacity;
+      color: $white;
+      padding: 20px;
+      margin: 2rem 3rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      border: 1px solid $white-opacity;
+    }
+
+    &__btn {
+      font-size: 1.2rem;
+      padding: 20px;
+      border-radius: 5px;
+      border: $borde-black;
+      background-color: $white;
+
+      &:hover {
+        background-color: $rojo-ladrillo;
+        border: $black;
+        color: $white;
+      }
+    }
+  }
+
+  //Marcas destacadas
+  .marcas {
+    background-color: $black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+    &__img {
+      height: 75px;
+      margin-left: 1rem;
+    }
+  }
+  .marcas__subtitulo {
+    color: $white;
+    background-color: $black-opacity;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}

@@ -1,0 +1,13 @@
+@import "./variables";
+
+@keyframes efecto {
+  50% {
+    color: $green;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

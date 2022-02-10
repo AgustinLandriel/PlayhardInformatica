@@ -1,0 +1,73 @@
+@import "./variables";
+@import "./media-queries";
+
+//Formulario Newsletter suscripcion
+.newsletter {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: $rojo-ladrillo;
+  padding: 10px;
+
+  @include desktop {
+    justify-content: center;
+  }
+  @include laptot-desktop {
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-items: center;
+  }
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-items: center;
+  }
+  @include movil {
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  &__label {
+    font-size: 1.5rem;
+    color: $white;
+  }
+  &__redes {
+    width: 35px;
+    height: 35px;
+    margin: 0px 1rem;
+  }
+  &__input {
+    font-size: 1.2rem;
+    width: 300px;
+    padding: 5px;
+    border: 2px $black double;
+    color: $black;
+    margin-left: 2rem;
+    &:focus {
+      outline: none;
+    }
+    @include laptot-desktop {
+      margin: 1rem;
+    }
+    @include tablet {
+      margin: 1rem;
+    }
+    @include movil {
+      margin-top: 1rem;
+    }
+  }
+  &__btn {
+    font-size: 1.2rem;
+    background-color: $black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: $white;
+    @include desktop {
+      margin-left: 2rem;
+    }
+    @include movil {
+      margin: 1rem;
+    }
+  }
+}

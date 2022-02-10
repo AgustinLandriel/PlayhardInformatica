@@ -1,0 +1,22 @@
+@import "./variables";
+
+.color-blue {
+  color: rgb(75, 75, 197);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.white-icon {
+  color: $white;
+}
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.shadow-box {
+  box-shadow: 10px 10px 15px $black;
+}

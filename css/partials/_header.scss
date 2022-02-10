@@ -1,0 +1,91 @@
+@import "./variables";
+@import "./media-queries";
+
+.header {
+  &--bg {
+    background-color: black;
+  }
+  &__title {
+    font-family: "Alfa Slab One", cursive;
+    text-shadow: 2px 0px 10px #07880d;
+    color: $green;
+    animation-name: efecto;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+  }
+  &__item {
+    font-size: 1.2rem;
+    padding: 5px;
+    color: $white;
+    transition: transform 0.5s;
+  }
+
+  &__item:hover {
+    border-bottom: $border-bottom;
+    transform: skewX(3deg);
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+  }
+  &__link:visited {
+    color: $white;
+  }
+
+  &__sesion {
+    font-size: 1rem;
+    color: $white;
+    background-color: $black;
+    padding: 10px;
+    text-decoration: none;
+    border: $borde-green;
+    border-radius: 5px;
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border: 1px solid $black;
+    }
+  }
+
+  &__registro {
+    font-size: 1rem;
+    color: $black;
+    background-color: $white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+
+    &:hover {
+      color: $white;
+      background-color: $black;
+      border: 1px solid $white-opacity;
+    }
+  }
+
+  .search {
+    border: $borde-green;
+    color: $white;
+    background-color: $black;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .search-btn {
+    @extend .search;
+    color: $green;
+    &:hover {
+      color: $green-strong;
+    }
+  }
+
+  .position-m {
+    @include tablet {
+      align-self: center;
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import "./variables";
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vw;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../../assets/fondo9.jpg);
+  background-size: cover;
+  background-position: top;
+
+  &__title {
+    color: $white;
+    font-size: 3rem;
+    transition: transform 1s;
+
+    @include movil {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.productos {
+  background-image: url(../assets/fondo4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: $black;
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(4, 200px);
+  grid-template-areas:
+    "header header header"
+    "productos productos productos"
+    "footer footer footer";
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 50px 0px;
+
+  @include laptot-desktop {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 3rem;
+  }
+  @include tablet {
+    background-image: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include movil {
+    background-image: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
+  }
+
+  &__links {
+    color: $white;
+    text-decoration: none;
+    position: relative;
+    left: 3.5rem;
+    bottom: 8rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+
+    &:hover {
+      color: $white;
+      font-size: 1.6rem;
+    }
+    &:visited {
+      color: $white;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    border: none;
+    display: flex;
+    @include tablet {
+      width: 250px;
+      height: 100%;
+    }
+    &:hover {
+      opacity: 1;
+      border-bottom: $border-bottom;
+    }
+  }
+}
+
+main {
+  grid-area: productos;
+}
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}

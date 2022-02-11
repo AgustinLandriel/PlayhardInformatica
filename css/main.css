@@ -643,7 +643,8 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background-image: url(../assets/fondo7.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5))), url(../assets/fondo7.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5)), url(../assets/fondo7.jpg);
   background-position: center;
   background-size: cover;
   padding: 2rem;
@@ -677,11 +678,8 @@ body {
 }
 
 .section2 .servicio__title {
-  font-size: 2rem;
-  margin: 2rem;
-  text-transform: uppercase;
   color: #ffffff;
-  font-family: "Lato";
+  text-shadow: 3px 4px 3px #000000;
 }
 
 @media only screen and (min-width: 1236px) {
@@ -693,6 +691,11 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
   }
+}
+
+.section2 .servicio__title h2 {
+  text-transform: uppercase;
+  font-family: "nunito";
 }
 
 .section2 .servicio div p {
@@ -733,7 +736,7 @@ body {
 }
 
 .section2 .marcas__img {
-  height: 75px;
+  height: 70px;
   margin-left: 1rem;
 }
 

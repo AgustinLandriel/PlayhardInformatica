@@ -134,7 +134,8 @@
   .servicio {
     display: flex;
     flex-wrap: wrap;
-    background-image: url(../assets/fondo7.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5)),
+      url(../assets/fondo7.jpg);
     background-position: center;
     background-size: cover;
     padding: 2rem;
@@ -151,15 +152,17 @@
     }
 
     &__title {
-      font-size: 2rem;
-      margin: 2rem;
-      text-transform: uppercase;
       color: $white;
-      font-family: "Lato";
+      text-shadow: 3px 4px 3px $black;
 
       @include desktop {
         flex: 1;
         align-self: center;
+      }
+
+      & h2 {
+        text-transform: uppercase;
+        font-family: "nunito";
       }
     }
 
@@ -197,7 +200,7 @@
     padding: 10px;
 
     &__img {
-      height: 75px;
+      height: 70px;
       margin-left: 1rem;
     }
   }

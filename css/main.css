@@ -539,6 +539,10 @@ body {
       flex-wrap: wrap;
 }
 
+.section2 .card-width {
+  width: 20rem;
+}
+
 .section2__info {
   background-color: #000000;
   display: -webkit-box;
@@ -720,6 +724,7 @@ body {
   background-color: #c42020;
   border: #000000;
   color: #ffffff;
+  text-shadow: 3px 3px 5px #000000;
 }
 
 .section2 .marcas {
@@ -877,7 +882,7 @@ body {
 
 .contact__input {
   padding: 10px;
-  width: 16rem;
+  width: 18rem;
   background-color: #000000;
   color: #ffffff;
   border: none;
@@ -956,6 +961,11 @@ body {
   background-position: top;
 }
 
+.contenedor:hover :first-child {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .contenedor__title {
   color: #ffffff;
   font-size: 3rem;
@@ -963,17 +973,13 @@ body {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+  text-shadow: 3px 3px 5px #000000;
 }
 
 @media screen and (max-width: 575px) {
   .contenedor__title {
     font-size: 1.5rem;
   }
-}
-
-.contenedor__title:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .productos {
@@ -1032,13 +1038,20 @@ body {
   }
 }
 
+.productos__items {
+  position: relative;
+}
+
 .productos__links {
   color: #ffffff;
   text-decoration: none;
-  position: relative;
-  left: 3.5rem;
-  bottom: 8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 1.5rem;
+  text-shadow: 3px 3px 5px #000000;
   font-weight: 400;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -1046,6 +1059,10 @@ body {
 .productos__links:hover {
   color: #ffffff;
   font-size: 1.6rem;
+}
+
+.productos__links:hover ~ img {
+  border-top: none;
 }
 
 .productos__links:visited {
@@ -1056,7 +1073,9 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  border: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top: 1px solid #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1071,7 +1090,12 @@ body {
 
 .productos__img:hover {
   opacity: 1;
+  border: none;
   border-bottom: 4px solid #09ff00c9;
+}
+
+.productos__img:hover ~ a {
+  font-size: 1.6rem;
 }
 
 main {

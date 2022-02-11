@@ -65,6 +65,10 @@
     flex-wrap: wrap;
   }
 
+  .card-width {
+    width: 20rem;
+  }
+
   //Info tienda
   &__info {
     background-color: $black;
@@ -187,6 +191,7 @@
         background-color: $rojo-ladrillo;
         border: $black;
         color: $white;
+        text-shadow: $text-shadow-black;
       }
     }
   }

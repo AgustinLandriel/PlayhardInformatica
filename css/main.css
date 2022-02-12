@@ -37,6 +37,12 @@ body {
           box-shadow: 10px 10px 15px #000000;
 }
 
+.bg-wave {
+  background-image: url(../assets/wave2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @-webkit-keyframes efecto {
   50% {
     color: #09ff0077;
@@ -270,7 +276,10 @@ body {
 }
 
 .footer {
-  background-color: #000000;
+  background-image: url(../../assets/layered-waves-haikei2.svg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,6 +317,7 @@ body {
 }
 
 .footer_link {
+  text-shadow: 3px 3px 4px #000000;
   text-decoration: none;
   color: #ffffff;
   font-size: 1.2rem;
@@ -335,9 +345,14 @@ body {
 }
 
 .footer p {
+  text-shadow: 3px 3px 5px #000000;
   color: #ffffff;
   font-size: 1.2rem;
   padding: 5px;
+}
+
+.footer iframe {
+  border-radius: 1rem;
 }
 
 .newsletter {
@@ -728,7 +743,6 @@ body {
 }
 
 .section2 .marcas {
-  background-color: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

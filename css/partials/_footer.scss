@@ -3,7 +3,11 @@
 @import "./media-queries";
 
 .footer {
-  background-color: $black;
+  background-image: url(../../assets/layered-waves-haikei2.svg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -24,6 +28,7 @@
   }
 
   &_link {
+    text-shadow: 3px 3px 4px $black;
     text-decoration: none;
     color: $white;
     font-size: 1.2rem;
@@ -44,8 +49,13 @@
     margin: 0.5rem;
   }
   & p {
+    text-shadow: 3px 3px 5px $black;
     color: $white;
     font-size: 1.2rem;
     padding: 5px;
+  }
+
+  iframe {
+    border-radius: 1rem;
   }
 }

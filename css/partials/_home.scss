@@ -216,3 +216,10 @@
     text-align: center;
   }
 }
+
+//Carousel comportamiento
+@include movil {
+  .carousel {
+    display: none;
+  }
+}

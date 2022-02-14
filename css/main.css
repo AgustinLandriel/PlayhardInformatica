@@ -768,6 +768,12 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 575px) {
+  .carousel {
+    display: none;
+  }
+}
+
 .ayuda {
   background-color: #000000;
   display: -ms-grid;

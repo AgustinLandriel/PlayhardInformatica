@@ -67,12 +67,250 @@ body {
   }
 }
 
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -75%) rotate(0deg);
+            transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -75%) rotate(0deg);
+            transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+@keyframes efecto {
+  50% {
+    color: #09ff0077;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -75%) rotate(0deg);
+            transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -75%) rotate(360deg);
+            transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 .btn-orange {
   background: #ff4400;
   border: none;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+/* Boton enviar contacto */
+.button {
+  --color: #09ff00c9;
+  --color2: rgb(10, 25, 30);
+  padding: 0.8em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 0.3px solid var(--color);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  text-transform: uppercase;
+  color: var(--color);
+}
+
+.button::after, .button::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(90deg) translate(-50%, -50%);
+          transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+
+.button::before {
+  top: -50%;
+  left: -25%;
+  -webkit-transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+          transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button:hover::before {
+  -webkit-transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+          transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button:hover::after {
+  -webkit-transform: skew(45deg) translate(-50%, -50%);
+          transform: skew(45deg) translate(-50%, -50%);
+}
+
+.button:hover {
+  color: var(--color2);
+}
+
+.button:active {
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.button-secundario {
+  font-size: 15px;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-family: "Roboto", "Segoe UI", sans-serif;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.7em 2em;
+  border: 1px solid #176417;
+  border-radius: 2px;
+  position: relative;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #09ff00c9;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background: #000000;
+}
+
+.button-secundario:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.button-secundario:hover, .button-secundario:focus {
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.button-secundario:hover:before, .button-secundario:focus:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.button-secundario:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.newsletter__btn {
+  position: relative;
+  padding: 15px 10px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+@media only screen and (min-width: 1236px) {
+  .newsletter__btn {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .newsletter__btn {
+    margin: 1rem;
+  }
+}
+
+.newsletter__btn span {
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.newsletter__btn .liquid {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: red;
+  -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.newsletter__btn .liquid::after,
+.newsletter__btn .liquid::before {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+  background: #fff;
+}
+
+.newsletter__btn .liquid::before {
+  border-radius: 45%;
+  background: #141414;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+.newsletter__btn .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  -webkit-animation: animate 10s linear infinite;
+          animation: animate 10s linear infinite;
+}
+
+.newsletter__btn:hover .liquid {
+  top: -120px;
 }
 
 .header--bg {
@@ -175,6 +413,29 @@ body {
   }
 }
 
+.navbar-dark .navbar-toggler {
+  color: transparent;
+  border-color: green;
+}
+
+.navbar-toggler {
+  border: 1px solid transparent;
+}
+
+.form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .form-flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .header--bg {
   background-color: black;
 }
@@ -272,6 +533,29 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
     margin-left: 30px;
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: transparent;
+  border-color: green;
+}
+
+.navbar-toggler {
+  border: 1px solid transparent;
+}
+
+.form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .form-flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -449,27 +733,6 @@ body {
 @media screen and (max-width: 575px) {
   .newsletter__input {
     margin-top: 1rem;
-  }
-}
-
-.newsletter__btn {
-  font-size: 1.2rem;
-  background-color: #000000;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-}
-
-@media only screen and (min-width: 1236px) {
-  .newsletter__btn {
-    margin-left: 2rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .newsletter__btn {
-    margin: 1rem;
   }
 }
 
@@ -904,7 +1167,7 @@ body {
 .contact__input {
   padding: 10px;
   width: 18rem;
-  background-color: #000000;
+  background-color: #0c0c0c;
   color: #ffffff;
   border: none;
   border-bottom: 4px solid #09ff00c9;
@@ -912,34 +1175,6 @@ body {
 
 .contact__input:focus {
   outline: none;
-}
-
-.contact__input--primary {
-  margin: 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border: 1px solid #ffffff37;
-  border-radius: 5px;
-  font-size: 1.2rem;
-}
-
-.contact__input--primary:hover {
-  background-color: #09ff00c9;
-  color: #000000;
-  border: 1px solid #000000;
-}
-
-.contact__input--secondary {
-  background-color: #ffffff;
-  color: #000000;
-  border: 1px solid #000000;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.contact__input--secondary:hover {
-  background-color: grey;
 }
 
 .contact__selector {
@@ -1004,7 +1239,8 @@ body {
 }
 
 .productos {
-  background-image: url(../assets/fondo4.jpg);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7))), url(../assets/fondo4.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7)), url(../assets/fondo4.jpg);
   background-position: center;
   background-size: cover;
   background-color: #000000;
@@ -1094,9 +1330,7 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  border-top: 1px solid #ffffff;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1106,6 +1340,13 @@ body {
   .productos__img {
     width: 250px;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .productos__img {
+    height: 200px;
+    width: 250px;
   }
 }
 
@@ -1190,6 +1431,12 @@ footer {
 .armar-pc__container {
   width: 400px;
   height: 400px;
+}
+
+@media screen and (max-width: 575px) {
+  .armar-pc__container {
+    width: 350px;
+  }
 }
 
 .armar-pc__container--amd {

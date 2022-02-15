@@ -25,38 +25,12 @@
   &__input {
     padding: 10px;
     width: 18rem;
-    background-color: $black;
+    background-color: rgb(12, 12, 12);
     color: $white;
     border: none;
     border-bottom: $border-bottom;
     &:focus {
       outline: none;
-    }
-    &--primary {
-      margin: 20px;
-      background-color: $black;
-      color: $white;
-      border: 1px solid $white-opacity;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      &:hover {
-        background-color: $green-strong;
-        color: $black;
-        border: $borde-black;
-      }
-    }
-
-    &--secondary {
-      background-color: $white;
-      color: $black;
-      border: $borde-black;
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-      border-radius: 5px;
-
-      &:hover {
-        background-color: $grey;
-      }
     }
   }
 

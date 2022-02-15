@@ -69,6 +69,7 @@
     border: $borde-green;
     color: $white;
     background-color: $black;
+
     &:focus {
       outline: none;
     }
@@ -87,5 +88,21 @@
       align-self: center;
       margin-left: 30px;
     }
+  }
+}
+
+//Algunas clases de bootstrap modificadas
+.navbar-dark .navbar-toggler {
+  color: transparent;
+  border-color: green;
+}
+.navbar-toggler {
+  border: 1px solid transparent;
+}
+.form-flex {
+  display: flex;
+
+  @include tablet {
+    justify-content: center;
   }
 }

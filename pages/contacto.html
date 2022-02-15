@@ -59,7 +59,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon "></span>
           </button>
           <div
             class="collapse navbar-collapse flex-grow-0 text-align-center "
@@ -90,7 +90,7 @@
                 >
               </li>
             </ul>
-            <form class="d-flex mx-5">
+            <form class="form-flex mx-5">
               <input
                 class="me-2 px-3 rounded search"
                 type="search"
@@ -204,8 +204,12 @@
             rows="4"
             placeholder="Escribe tu mensaje..."
           ></textarea>
-          <input class="contact__input contact__input--primary" id="submit" type="submit" value="Enviar" />
-          <input class="contact__input contact__input--secondary" id="reset" type="reset" value="Vaciar formulario" />
+          
+          <button class="button" type="submit" value="Enviar"> Enviar
+          </button>
+          <button class="button-secundario" type="reset" value="Vaciar formulario"> Vaciar
+          </button>
+      
         </form>
       </section>
     </main>

@@ -33,6 +33,10 @@
     width: 400px;
     height: 400px;
 
+    @include movil {
+      width: 350px;
+    }
+
     &--amd {
       box-shadow: 0px 20px 50px rgb(212, 11, 11);
     }

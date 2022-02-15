@@ -56,18 +56,4 @@
       margin-top: 1rem;
     }
   }
-  &__btn {
-    font-size: 1.2rem;
-    background-color: $black;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    color: $white;
-    @include desktop {
-      margin-left: 2rem;
-    }
-    @include movil {
-      margin: 1rem;
-    }
-  }
 }

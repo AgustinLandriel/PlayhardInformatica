@@ -26,3 +26,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.hr-color {
+  background: linear-gradient(to left, $green-strong 10%, $black 70%);
+  height: 10px !important;
+  margin: 0;
+  opacity: 1;
+}

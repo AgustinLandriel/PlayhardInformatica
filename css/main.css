@@ -43,6 +43,14 @@ body {
   background-size: cover;
 }
 
+.hr-color {
+  background: -webkit-gradient(linear, right top, left top, color-stop(10%, #09ff00c9), color-stop(70%, #000000));
+  background: linear-gradient(to left, #09ff00c9 10%, #000000 70%);
+  height: 10px !important;
+  margin: 0;
+  opacity: 1;
+}
+
 @-webkit-keyframes efecto {
   50% {
     color: #09ff0077;
@@ -373,16 +381,24 @@ body {
           animation-duration: 2s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 575px) {
+  .header__title {
+    margin-left: 4.5rem !important;
+  }
 }
 
 .header__item {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 5px;
   color: #ffffff;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  text-shadow: 5px 4.3px 4px #000000;
 }
 
 .header__item:hover {
@@ -496,16 +512,24 @@ body {
           animation-duration: 2s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  margin-left: 5rem;
+}
+
+@media screen and (max-width: 575px) {
+  .header__title {
+    margin-left: 4.5rem !important;
+  }
 }
 
 .header__item {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 5px;
   color: #ffffff;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  text-shadow: 5px 4.3px 4px #000000;
 }
 
 .header__item:hover {
@@ -862,6 +886,10 @@ body {
   text-align: center;
   padding: 5rem;
   text-shadow: 0px 0px 10px #000000;
+}
+
+.section2 .titulo-productoDestacado h2 {
+  font-size: 3rem;
 }
 
 .section2 .card-flex {
@@ -1300,7 +1328,7 @@ body {
 
 .contenedor__title {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -1310,7 +1338,7 @@ body {
 
 @media screen and (max-width: 575px) {
   .contenedor__title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 

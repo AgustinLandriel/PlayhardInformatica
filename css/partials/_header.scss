@@ -12,12 +12,18 @@
     animation-name: efecto;
     animation-duration: 2s;
     animation-timing-function: linear;
+    margin-left: 5rem;
+
+    @include movil {
+      margin-left: 4.5rem !important;
+    }
   }
   &__item {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 5px;
     color: $white;
     transition: transform 0.5s;
+    text-shadow: 5px 4.3px 4px $black;
   }
 
   &__item:hover {

@@ -30,11 +30,18 @@
   &__label {
     font-size: 1.5rem;
     color: $white;
+
+    @include desktop {
+      margin-top: 0.5rem;
+    }
   }
   &__redes {
     width: 35px;
     height: 35px;
     margin: 0px 1rem;
+    @include desktop {
+      margin-top: 0.5rem;
+    }
   }
   &__input {
     font-size: 1.2rem;

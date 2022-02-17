@@ -120,7 +120,7 @@ body {
       align-self: center;
 }
 
-/* Boton enviar contacto */
+/* Boton enviar del formulario de contacto */
 .button {
   --color: #09ff00c9;
   --color2: rgb(10, 25, 30);
@@ -245,7 +245,6 @@ body {
   padding: 15px 10px;
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid #000000;
@@ -313,8 +312,55 @@ body {
   top: -120px;
 }
 
+/*Boton EMPEZAR YA de Section PC index */
+.section__btn {
+  cursor: pointer;
+  font-weight: 700;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #cfef00;
+  font-family: "Nunito";
+  border: 1px solid transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .section__btn {
+    margin-top: 1rem;
+  }
+}
+
+.section__btn:hover {
+  background: #a6c900;
+}
+
+.section__btn > svg {
+  width: 34px;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.section__btn:hover svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.section__btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 .header--bg {
-  background-color: black;
+  background-color: #0f1011;
 }
 
 .header__title {
@@ -437,7 +483,7 @@ body {
 }
 
 .header--bg {
-  background-color: black;
+  background-color: #0f1011;
 }
 
 .header__title {
@@ -699,10 +745,22 @@ body {
   color: #ffffff;
 }
 
+@media only screen and (min-width: 1236px) {
+  .newsletter__label {
+    margin-top: 0.5rem;
+  }
+}
+
 .newsletter__redes {
   width: 35px;
   height: 35px;
   margin: 0px 1rem;
+}
+
+@media only screen and (min-width: 1236px) {
+  .newsletter__redes {
+    margin-top: 0.5rem;
+  }
 }
 
 .newsletter__input {
@@ -1023,7 +1081,7 @@ body {
   margin-left: 1rem;
 }
 
-.section2 .marcas__subtitulo {
+.section2 .subtitulo-marcas {
   color: #ffffff;
   background-color: #00000073;
   font-size: 2.5rem;
@@ -1034,6 +1092,24 @@ body {
 @media screen and (max-width: 575px) {
   .carousel {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .carousel-height {
+    height: 236px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1235px) {
+  .carousel-height {
+    height: 399px;
+  }
+}
+
+@media only screen and (min-width: 1236px) {
+  .carousel-height {
+    height: 450px;
   }
 }
 

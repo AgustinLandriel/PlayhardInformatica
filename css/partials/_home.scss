@@ -208,7 +208,7 @@
       margin-left: 1rem;
     }
   }
-  .marcas__subtitulo {
+  .subtitulo-marcas {
     color: $white;
     background-color: $black-opacity;
     font-size: 2.5rem;
@@ -221,5 +221,21 @@
 @include movil {
   .carousel {
     display: none;
+  }
+}
+
+@include tablet {
+  .carousel-height {
+    height: 236px;
+  }
+}
+@include laptot-desktop {
+  .carousel-height {
+    height: 399px;
+  }
+}
+@include desktop {
+  .carousel-height {
+    height: 450px;
   }
 }

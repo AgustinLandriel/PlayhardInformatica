@@ -18,6 +18,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 5rem 0rem;
+    overflow: hidden;
 
     @include laptot-desktop {
       flex-direction: column;

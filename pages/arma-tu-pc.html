@@ -13,6 +13,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -115,9 +118,9 @@
     <main>
       <section class="armar-pc">
         <div class="armar-pc__marcas">
-          <div class="armar-pc__container armar-pc__container--intel">
+          <div class="armar-pc__container armar-pc__container--intel" data-aos="fade-right" data-aos-duration="2000">
             <a href="./productos.html"
-              ><img class="armar-pc__img" src="../assets/intel_bg.jpg" alt="intel"
+              ><img class="armar-pc__img" src="../assets/intel_bg.jpg" alt="intel" 
             /></a>
           </div>
           <div class="armar-pc__parrafo">
@@ -127,7 +130,7 @@
               para armar tu pc.
             </h3>
           </div>
-          <div class="armar-pc__container armar-pc__container--amd">
+          <div class="armar-pc__container armar-pc__container--amd" data-aos="fade-left" data-aos-duration="2000">
             <a href="./productos.html"
               ><img class="armar-pc__img" src="../assets/amd_bg.jpg" alt="amd"
             /></a>
@@ -201,4 +204,7 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"
 ></script>
+<script>
+  AOS.init();
+</script>
 </html>

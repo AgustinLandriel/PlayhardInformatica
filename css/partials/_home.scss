@@ -61,6 +61,12 @@
     & h2 {
       font-size: 3rem;
     }
+
+    @include movil {
+      & h2 {
+        font-size: 2.5rem;
+      }
+    }
   }
 
   .card-flex {

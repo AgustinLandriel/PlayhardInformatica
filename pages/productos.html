@@ -13,6 +13,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -117,7 +119,7 @@
        <h2 class="contenedor__title"">Nuestras Categorías</h2>
       </div>
 
-      <section class="productos">
+      <section class="productos" data-aos="zoom-in-right" data-aos-duration="1500">
 
 
         <div class="productos__items">
@@ -302,4 +304,7 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"
 ></script>
+<script>
+  AOS.init();
+</script>
 </html>

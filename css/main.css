@@ -892,6 +892,12 @@ body {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 575px) {
+  .section2 .titulo-productoDestacado h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .section2 .card-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1510,6 +1516,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 5rem 0rem;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1235px) {

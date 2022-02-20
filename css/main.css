@@ -1308,16 +1308,6 @@ body {
   color: #09ff00c9;
 }
 
-.contact__input[type="radio"] {
-  -webkit-box-shadow: 0 0 0 1.5px #09ff00c9;
-          box-shadow: 0 0 0 1.5px #09ff00c9;
-}
-
-.contact__input[type="checkbox"] {
-  -webkit-box-shadow: 0 0 0 1.5px #09ff00c9;
-          box-shadow: 0 0 0 1.5px #09ff00c9;
-}
-
 .contact__selector {
   padding: 5px;
   margin: 15px;

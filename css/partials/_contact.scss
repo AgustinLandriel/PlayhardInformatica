@@ -52,13 +52,6 @@
     &:checked + label {
       color: $green-strong;
     }
-
-    &[type="radio"] {
-      box-shadow: 0 0 0 1.5px $green-strong;
-    }
-    &[type="checkbox"] {
-      box-shadow: 0 0 0 1.5px $green-strong;
-    }
   }
 
   &__selector {

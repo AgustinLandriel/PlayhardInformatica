@@ -1250,6 +1250,7 @@ body {
 .contact__subtitulo {
   padding: 2rem;
   font-size: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .contact__form {
@@ -1271,7 +1272,16 @@ body {
 .contact__label {
   margin: 10px;
   font-size: 1.5rem;
-  font-style: italic;
+  color: #ffffff;
+  text-shadow: 0px 1px 1.5px #000000;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  opacity: 1;
+}
+
+.contact__label-position {
+  position: relative;
+  bottom: 6rem;
 }
 
 .contact__input {
@@ -1287,6 +1297,27 @@ body {
   outline: none;
 }
 
+.contact__input:placeholder-shown + label {
+  position: relative;
+  bottom: 3rem;
+  right: 6rem;
+  opacity: 0;
+}
+
+.contact__input:checked + label {
+  color: #09ff00c9;
+}
+
+.contact__input[type="radio"] {
+  -webkit-box-shadow: 0 0 0 1.5px #09ff00c9;
+          box-shadow: 0 0 0 1.5px #09ff00c9;
+}
+
+.contact__input[type="checkbox"] {
+  -webkit-box-shadow: 0 0 0 1.5px #09ff00c9;
+          box-shadow: 0 0 0 1.5px #09ff00c9;
+}
+
 .contact__selector {
   padding: 5px;
   margin: 15px;
@@ -1299,6 +1330,8 @@ body {
 }
 
 .contact__textArea {
+  position: relative;
+  top: 2rem;
   background-color: #000000;
   color: #ffffff;
   border: 1px solid #09ff0077;
@@ -1308,6 +1341,38 @@ body {
 
 .contact__textArea:focus {
   outline: none;
+}
+
+.contact__textArea:placeholder-shown + label {
+  position: relative;
+  right: 4rem;
+  bottom: 8rem;
+  opacity: 0;
+}
+
+.contact__area-position {
+  position: relative;
+  bottom: 10rem;
+  color: white;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 575px) {
+  .contact__area-position {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact__area-position {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1235px) {
+  .contact__area-position {
+    margin-top: 2rem;
+  }
 }
 
 .contenedor {

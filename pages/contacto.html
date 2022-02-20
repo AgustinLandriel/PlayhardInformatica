@@ -121,19 +121,19 @@
             !Comunicate con nuestro equipo ante cualquier duda!
           </h3>
 
-          <label class="contact__label" for="nombre">Nombre:</label>
+          
           <input  class="contact__input" type="text" id="nombre" name="userName" placeholder="Nombre" />
+          <label class="contact__label contact__label-position" for="nombre">Nombre</label>
 
-          <label class="contact__label" for="apellido">Apellido:</label>
           <input
           class="contact__input"
-            type="text"
-            id="apellido"
-            name="userLastName"
-            placeholder="Apellido"
+          type="text"
+          id="apellido"
+          name="userLastName"
+          placeholder="Apellido"
           />
-
-          <label class="contact__label" for="email">Email:</label>
+          <label class="contact__label contact__label-position" for="apellido">Apellido</label>
+          
           <input
           class="contact__input"
             type="email"
@@ -141,19 +141,21 @@
             id="email"
             placeholder="tucorreo@dominio.com"
             required
-          />
-
-          <label class="contact__label" for="celular">Celular:</label>
-          <input
-          class="contact__input"
+            />
+            <label class="contact__label contact__label-position" for="email">Email</label>
+            
+            <input
+            class="contact__input"
             type="tel"
             name="numero"
             id="celular"
             placeholder="Numero de celular"
             required
-          />
+            />
+            <label class="contact__label contact__label-position" for="celular">Celular</label>
+            
+          <label class="contact__label" for="genero">Seleccione su sexo</label>
 
-          <label class="contact__label" for="genero">Seleccione su sexo:</label>
           <input
           class="contact__input"
             type="radio"
@@ -185,9 +187,7 @@
             <option value="Casado/a">Casado/a</option>
             <option value="En pareja">En pareja</option>
           </select>
-          <label class="contact__label" for="sub"
-            >Desea recibir información a través de nuestro newsletter?</label
-          >
+
           <input
           class="contact__input"
             class="checkbox"
@@ -196,16 +196,22 @@
             id="sub"
             value="1"
           />
-          <label class="contact__label" for="comentario">Dejanos tu consulta.</label>
+          <label class="contact__label contact" for="sub"
+            >Desea recibir información a través de nuestro newsletter?</label
+          >
+
+
+          
           <textarea
           class="contact__textArea"
             name="comment"
             id="comentario"
             cols="40"
             rows="4"
-            placeholder="Escribe tu mensaje..."
+            placeholder="Dejanos tu consulta"
           ></textarea>
-          
+          <label class="contact__label contact__area-position" for="comentario">Dejanos tu consulta</label>
+
           <button class="button" type="submit" value="Enviar"> Enviar
           </button>
           <button class="button-secundario" type="reset" value="Vaciar formulario"> Vaciar

@@ -8,6 +8,7 @@
   &__subtitulo {
     padding: 2rem;
     font-size: 2.5rem;
+    margin-bottom: 5rem;
   }
   &__form {
     color: $white;
@@ -19,7 +20,15 @@
   &__label {
     margin: 10px;
     font-size: 1.5rem;
-    font-style: italic;
+    color: $white;
+    text-shadow: 0px 1px 1.5px $black;
+    transition: all 0.7s;
+    opacity: 1;
+
+    &-position {
+      position: relative;
+      bottom: 6rem;
+    }
   }
 
   &__input {
@@ -31,6 +40,24 @@
     border-bottom: $border-bottom;
     &:focus {
       outline: none;
+    }
+
+    &:placeholder-shown + label {
+      position: relative;
+      bottom: 3rem;
+      right: 6rem;
+      opacity: 0;
+    }
+
+    &:checked + label {
+      color: $green-strong;
+    }
+
+    &[type="radio"] {
+      box-shadow: 0 0 0 1.5px $green-strong;
+    }
+    &[type="checkbox"] {
+      box-shadow: 0 0 0 1.5px $green-strong;
     }
   }
 
@@ -46,6 +73,8 @@
   }
 
   &__textArea {
+    position: relative;
+    top: 2rem;
     background-color: $black;
     color: $white;
     border: $borde-green;
@@ -53,6 +82,32 @@
     resize: none;
     &:focus {
       outline: none;
+    }
+
+    &:placeholder-shown + label {
+      position: relative;
+      right: 4rem;
+      bottom: 8rem;
+      opacity: 0;
+    }
+  }
+
+  &__area-position {
+    position: relative;
+    bottom: 10rem;
+    color: white;
+    margin-top: 1rem;
+
+    @include movil {
+      margin-top: 2rem;
+    }
+
+    @include tablet {
+      margin-top: 2rem;
+    }
+
+    @include laptot-desktop {
+      margin-top: 2rem;
     }
   }
 }
